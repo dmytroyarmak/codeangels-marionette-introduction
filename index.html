@@ -46,7 +46,97 @@
 				</section>
 
 				<section>
+					<h2>About Marionette</h2>
+					<ul>
+						<li>Backbone.js framework</li>
+						<li>Reduce boilerplate code</li>
+						<li>Better Zombie management</li>
+						<li>View management</li>
+						<li>Modules</li>
+						<li>Messaging bus</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Short overview</h3>
+					<ul>
+						<li>Developed by Derick Bailey</li>
+						<li>First release at 2011</li>
+						<li>Current version: 1.6.1</li>
+						<li>~4500 Stars at GitGub</li>
+						<li>~1800 commits</li>
+						<li>~160 contributors</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Build-in dependencies</h2>
+					<ul>
+						<li><a href="https://github.com/marionettejs/backbone.wreqr">Backbone.Wreqr</a></li>
+						<li><a href="https://github.com/marionettejs/backbone.babysitter">Backbone.BabySitter</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Backbone.Wreqr</h2>
+					<p>Implement messaging bus for build application form decoupled modules</p>
+					<ul>
+						<li>Event Aggregator</li>
+						<li>Commands</li>
+						<li>Request / Response</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Event Aggregator</h2>
+					<pre><code>
+var vent = new Backbone.Wreqr.EventAggregator();
+
+vent.on("foo", function(){
+  console.log("foo event");
+});
+
+vent.trigger("foo");
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Commands</h2>
+					<pre><code>
+var commands = new Backbone.Wreqr.Commands();
+
+commands.setHandler("foo", function(){
+  console.log("the foo command was executed");
+});
+
+commands.execute("foo");
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Request / Response</h2>
+					<pre><code>
+var reqres = new Backbone.Wreqr.RequestResponse();
+
+reqres.setHandler("foo", function(){
+  return "foo requested. this is the response";
+});
+
+var result = reqres.request("foo");
+console.log(result);
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>It's not All-Or-Nothing</h2>
+					<p>You're not required to use all of Marionette.</p>
+					<p>You can pick what you need.</p>
+				</section>
+
+				<section>
 					<h1>THE END</h1>
+					<p>github.com/dmytroyarmak</p>
+					<p>dmytroyarmak@gmail.com</p>
 				</section>
 			</div>
 
