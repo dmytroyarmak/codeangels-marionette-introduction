@@ -173,6 +173,64 @@ MyCompositeView = Marionette.CompositeView.extend({
 				</section>
 
 				<section>
+					<h2>Marionette.Layout</h2>
+					<p>A view that renders a layout and creates region managers to manage areas within it</p>
+					<pre><code>
+AppLayout = Backbone.Marionette.Layout.extend({
+  template: "#layout-template",
+
+  regions: {
+    menu: "#menu",
+    content: "#content"
+  }
+});
+
+var layout = new AppLayout();
+layout.render();
+					</code></pre>
+					<pre><code>
+layout.menu.show(new MenuView());
+
+layout.content.show(new MainContentView());
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>View Management</h2>
+					<ul>
+						<li><a href="https://github.com/marionettejs/backbone.marionette/blob/master/docs/marionette.region.md">Marionette.Region</a></li>
+						<li><a href="https://github.com/marionettejs/backbone.marionette/blob/master/docs/marionette.regionmanager.md">Marionette.RegionManager</a></li>
+						<li><a href="https://github.com/marionettejs/backbone.marionette/blob/master/docs/marionette.renderer.md">Marionette.Renderer</a></li>
+						<li><a href="https://github.com/marionettejs/backbone.marionette/blob/master/docs/marionette.templatecache.md">Marionette.TemplateCache</a></li>
+						<li><a href="https://github.com/marionettejs/backbone.babysitter">Backbone.BabySitter</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Marionette.Region</h2>
+					<pre><code>
+var myRegion = new Marionette.Region({
+  el: "#someElement"
+});
+
+					</code></pre>
+					<p>Show the first view.</p>
+					<pre><code>
+var myView = new MyView();
+myRegion.show(myView);
+					</code></pre>
+					<p>Replace the view with another. The `close` method is called for you</p>
+					<pre><code>
+var anotherView = new AnotherView();
+myRegion.show(anotherView);
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>DEMO: <a href="https://github.com/dmytroyarmak/marionette-contact-manager/releases/tag/step-4">Step 4 - Use Region</a></h2>
+				</section>
+
+				<section>
 					<h2>Backbone.Wreqr</h2>
 					<p>Implement messaging bus for build application form decoupled modules</p>
 					<ul>
