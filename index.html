@@ -78,6 +78,63 @@
 				</section>
 
 				<section>
+					<h2>DEMO: <a href="https://github.com/dmytroyarmak/marionette-contact-manager/releases/tag/step-0">Step 0 - Initialization of project</a></h2>
+				</section>
+
+				<section>
+					<h2>DEMO: <a href="https://github.com/dmytroyarmak/marionette-contact-manager/releases/tag/step-1">Step 1 - Install Marionette.js</a></h2>
+				</section>
+
+				<section>
+					<h2>It's not All-Or-Nothing</h2>
+					<p>You're not required to use all of Marionette.</p>
+					<p>You can pick what you need.</p>
+				</section>
+
+				<section>
+					<h2>Marionette's Pieces</h2>
+					<ul>
+						<li>Views</li>
+						<li>View Management</li>
+						<li>Application Infrastructure</li>
+						<li>Object-Messaging Infrastructure</li>
+						<li>Other</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Views</h2>
+					<ul>
+						<li><a href="https://github.com/marionettejs/backbone.marionette/blob/master/docs/marionette.view.md">Marionette.View</a></li>
+						<li><a href="https://github.com/marionettejs/backbone.marionette/blob/master/docs/marionette.itemview.md">Marionette.ItemView</a></li>
+						<li><a href="https://github.com/marionettejs/backbone.marionette/blob/master/docs/marionette.collectionview.md">Marionette.CollectionView</a></li>
+						<li><a href="https://github.com/marionettejs/backbone.marionette/blob/master/docs/marionette.compositeview.md">Marionette.CompositeView</a></li>
+						<li><a href="https://github.com/marionettejs/backbone.marionette/blob/master/docs/marionette.layout.md">Marionette.Layout</a></li>
+					</ul>
+					<p>To read: <a href="https://github.com/marionettejs/backbone.marionette/wiki/Use-cases-for-the-different-views">Use cases for the different views</a></p>
+				</section>
+
+				<section>
+					<h2>Marionette.View</h2>
+					<p>The base View type that other Marionette views extend from (not intended to be used directly)</p>
+				</section>
+
+				<section>
+					<h2>Marionette.ItemView</h2>
+					<p>This is the most basic of view types.</p>
+					<p>Use to render one model or collection.</p>
+					<pre><code>
+MyView = Backbone.Marionette.ItemView.extend({
+  template: "#my-template"
+});
+
+myView = new MyView();
+myView.render();
+					</code></pre>
+				</section>
+
+
+				<section>
 					<h2>Backbone.Wreqr</h2>
 					<p>Implement messaging bus for build application form decoupled modules</p>
 					<ul>
@@ -127,10 +184,13 @@ console.log(result);
 					</code></pre>
 				</section>
 
+
 				<section>
-					<h2>It's not All-Or-Nothing</h2>
-					<p>You're not required to use all of Marionette.</p>
-					<p>You can pick what you need.</p>
+					<h2>Resources</h2>
+					<ul>
+						<li><a href="http://marionettejs.com/docs/backbone.marionette.html">Annotated source code</a></li>
+						<li><a href="https://github.com/marionettejs/backbone.marionette#marionettes-pieces">Documentation</a></li>
+					</ul>
 				</section>
 
 				<section>
