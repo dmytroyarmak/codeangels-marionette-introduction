@@ -320,6 +320,40 @@ var MyController = Marionette.Controller.extend({
 				</section>
 
 				<section>
+					<h2>Marionette.AppRouter</h2>
+					<pre><code>
+MyRouter = Marionette.AppRouter.extend({
+  // "someMethod" must exist at controller.someMethod
+  appRoutes: {
+    "some/route": "someMethod"
+  },
+
+  /* standard routes can be mixed with appRoutes/Controllers above */
+  routes : {
+    "some/otherRoute" : "someOtherMethod"
+  },
+  someOtherMethod : function(){
+    // do something here.
+  }
+
+});
+					</code></pre>
+					<pre><code>
+myObj = {
+  someMethod: function(){ /*...*/ }
+};
+
+new MyRouter({
+  controller: myObj
+});
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>DEMO: <a href="https://github.com/dmytroyarmak/marionette-contact-manager/releases/tag/step-7">Step 7 - Use AppRouter</a></h2>
+				</section>
+
+				<section>
 					<h2>Backbone.Wreqr</h2>
 					<p>Implement messaging bus for build application form decoupled modules</p>
 					<ul>
