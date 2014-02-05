@@ -231,6 +231,38 @@ myRegion.show(anotherView);
 				</section>
 
 				<section>
+					<h2>Application Infrastructure</h2>
+					<ul>
+						<li><a href="https://github.com/marionettejs/backbone.marionette/blob/master/docs/marionette.application.md">Marionette.Application</a></li>
+						<li><a href="https://github.com/marionettejs/backbone.marionette/blob/master/docs/marionette.application.module.md">Marionette.Module</a></li>
+						<li><a href="https://github.com/marionettejs/backbone.marionette/blob/master/docs/marionette.controller.md">Marionette.Controller</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Marionette.Application</h2>
+					<p>An application object that starts your app via initializers, and more</p>
+					<pre><code>
+MyApp = new Backbone.Marionette.Application();
+
+MyApp.addInitializer(function(options){
+  // do useful stuff here
+});
+
+MyApp.addRegions({
+  someRegion: "#some-div",
+  anotherRegion: "#another-div"
+});
+
+MyApp.start(options);
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>DEMO: <a href="https://github.com/dmytroyarmak/marionette-contact-manager/releases/tag/step-5">Step 5 - Use Application</a></h2>
+				</section>
+
+				<section>
 					<h2>Backbone.Wreqr</h2>
 					<p>Implement messaging bus for build application form decoupled modules</p>
 					<ul>
