@@ -243,7 +243,7 @@ myRegion.show(anotherView);
 					<h2>Marionette.Application</h2>
 					<p>An application object that starts your app via initializers, and more</p>
 					<pre><code>
-MyApp = new Backbone.Marionette.Application();
+MyApp = new Marionette.Application();
 
 MyApp.addInitializer(function(options){
   // do useful stuff here
@@ -260,6 +260,63 @@ MyApp.start(options);
 
 				<section>
 					<h2>DEMO: <a href="https://github.com/dmytroyarmak/marionette-contact-manager/releases/tag/step-5">Step 5 - Use Application</a></h2>
+				</section>
+
+				<section>
+					<h2>Mediastream.Module</h2>
+					<pre><code>
+MyApp.module("MyModule", function(MyModule, MyApp, Backbone, Marionette, $, _){
+
+  // Private Data And Functions
+  // --------------------------
+
+  var myData = "this is private data";
+
+  var myFunction = function(){
+    console.log(myData);
+  }
+
+
+  // Public Data And Functions
+  // -------------------------
+
+  MyModule.someData = "public data";
+
+  MyModule.someFunction = function(){
+    console.log(MyModule.someData);
+  }
+});
+
+console.log(MyApp.MyModule.someData); //=> public data
+MyApp.MyModule.someFunction(); //=> public data
+					</code></pre>
+					<p><a href="https://leanpub.com/marionette-gentle-introduction">Backbone.Marionette.js: A Gentle Introduction</a></p>
+				</section>
+
+				<section>
+					<h2>Marionette.Controller</h2>
+					<p>Very generic, multi-purpose object that can serve many different roles</p>
+					<pre><code>
+var MyController = Marionette.Controller.extend({
+
+  initialize: function(options){
+    this.stuff = options.stuff;
+  },
+
+  doStuff: function(){
+    this.trigger("stuff:done", this.stuff);
+  },
+
+  onClose: function(){
+  	/* ... */
+  }
+
+});
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>DEMO: <a href="https://github.com/dmytroyarmak/marionette-contact-manager/releases/tag/step-6">Step 6 - Use Controller</a></h2>
 				</section>
 
 				<section>
