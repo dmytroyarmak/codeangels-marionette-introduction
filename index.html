@@ -124,7 +124,7 @@
 					<p>This is the most basic of view types.</p>
 					<p>Use to render one model or collection.</p>
 					<pre><code>
-MyView = Backbone.Marionette.ItemView.extend({
+MyView = Marionette.ItemView.extend({
   template: "#my-template"
 });
 
@@ -135,6 +135,41 @@ myView.render();
 
 				<section>
 					<h2>DEMO: <a href="https://github.com/dmytroyarmak/marionette-contact-manager/releases/tag/step-2">Step 2 - Use ItemView</a></h2>
+				</section>
+
+				<section>
+					<h2>Marionette.CollectionView</h2>
+					<p>Render ItemView instances for each model</p>
+					<pre><code>
+MyItemView = Marionette.ItemView.extend({
+  template: "#item-template"
+});
+
+MyCollectionView = Marionette.CollectionView.extend({
+  itemView: MyItemView
+});
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Marionette.CompositeView</h2>
+					<p>A CompositeView is a collection view that knows how to render a template to wrap around the individual items.</p>
+					<p>Composite views can also be used to build hierarchical and recursive structures.</p>
+					<pre><code>
+MyItemView = Marionette.ItemView.extend({
+	template: "#item-template"
+});
+
+MyCompositeView = Marionette.CompositeView.extend({
+	templare: '#composite-template',
+	itemView: MyItemView,
+	itemViewContainer: '.list-of-items'
+});
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>DEMO: <a href="https://github.com/dmytroyarmak/marionette-contact-manager/releases/tag/step-3">Step 3 - Use CompositeView</a></h2>
 				</section>
 
 				<section>
