@@ -358,6 +358,14 @@ new MyRouter({
 				</section>
 
 				<section>
+					<h2>DEMO: <a href="https://github.com/dmytroyarmak/marionette-contact-manager/releases/tag/step-9">Step 9 - Store data in localStorage</a></h2>
+				</section>
+
+				<section>
+					<h2>DEMO: <a href="https://github.com/dmytroyarmak/marionette-contact-manager/releases/tag/step-10">Step 10 - Store data in RESTful backend</a></h2>
+				</section>
+
+				<section>
 					<h2>Backbone.Wreqr</h2>
 					<p>Implement messaging bus for build application form decoupled modules</p>
 					<ul>
@@ -370,49 +378,45 @@ new MyRouter({
 				<section>
 					<h2>Event Aggregator</h2>
 					<pre><code>
-var vent = new Backbone.Wreqr.EventAggregator();
-
-vent.on("foo", function(){
+MyApp.vent.on("foo", function(){
   console.log("foo event");
 });
 
-vent.trigger("foo");
+MyApp.vent.trigger("foo");
 					</code></pre>
 				</section>
 
 				<section>
 					<h2>Commands</h2>
 					<pre><code>
-var commands = new Backbone.Wreqr.Commands();
-
-commands.setHandler("foo", function(){
+MyApp.commands.setHandler("foo", function(){
   console.log("the foo command was executed");
 });
 
-commands.execute("foo");
+MyApp.commands.execute("foo");
 					</code></pre>
 				</section>
 
 				<section>
 					<h2>Request / Response</h2>
 					<pre><code>
-var reqres = new Backbone.Wreqr.RequestResponse();
+MyApp.reqres = new Backbone.Wreqr.RequestResponse();
 
-reqres.setHandler("foo", function(){
+MyApp.reqres.setHandler("foo", function(){
   return "foo requested. this is the response";
 });
 
-var result = reqres.request("foo");
+var result = MyApp.reqres.request("foo");
 console.log(result);
 					</code></pre>
 				</section>
-
 
 				<section>
 					<h2>Resources</h2>
 					<ul>
 						<li><a href="http://marionettejs.com/docs/backbone.marionette.html">Annotated source code</a></li>
 						<li><a href="https://github.com/marionettejs/backbone.marionette#marionettes-pieces">Documentation</a></li>
+						<li><a href="https://github.com/marionettejs/backbone.marionette/wiki/Books%2C-Articles%2C-Screencasts%2C-and-Presentations">Books, Articles, Screencasts, and Presentations</a></li>
 					</ul>
 				</section>
 
